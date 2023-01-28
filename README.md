@@ -12,4 +12,3 @@ The html-webpack-plugin will generate an HTML5 file for you that includes all yo
 style-loader - inject CSS into the DOM.
 
 Loaders arrays applies from right to left
-

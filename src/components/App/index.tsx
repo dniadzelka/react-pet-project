@@ -1,10 +1,8 @@
-import React from "react";
-import { Greet } from "../Greet";
+import React from 'react';
+import { Greet } from '../Greet';
 
-import "../../styles/style.scss";
+import '../../styles/style.scss';
 
 export function App() {
-    return (
-        <Greet />
-    )
+  return <Greet />;
 }

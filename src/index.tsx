@@ -1,7 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import {App} from "./components/App";
-import React from "react";
+import { App } from './components/App';
+import React from 'react';
 
 const container = document.getElementById('root');
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const root = createRoot(container!); // operator ! means not nullable
 root.render(<App />);
