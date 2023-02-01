@@ -11,16 +11,16 @@ const config = {
   output: {
     path: `${__dirname}/dist`,
     filename: '[contenthash].bundle.js',
-    clean: true
+    clean: true,
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js', '.css', '.scss'],
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        use: 'ts-loader'
+        use: 'ts-loader',
       },
       {
         test: /\.scss$/,
@@ -32,24 +32,24 @@ const config = {
           'css-loader',
 
           // Compiles Sass to CSS
-          'sass-loader'
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
   devServer: {
     host: 'localhost',
     port: 9000,
-    open: true
+    open: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Reat Pet',
-      template: './public/index.html'
+      template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[contenthash].style.css'
-    })
+      filename: '[contenthash].style.css',
+    }),
   ],
   optimization: {
     runtimeChunk: 'single',
@@ -60,11 +60,11 @@ const config = {
           name: 'vendors',
 
           // include all types of chunks
-          chunks: 'all'
-        }
-      }
-    }
-  }
+          chunks: 'all',
+        },
+      },
+    },
+  },
 };
 
 module.exports = () => {

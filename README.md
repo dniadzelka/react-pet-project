@@ -12,3 +12,5 @@ The html-webpack-plugin will generate an HTML5 file for you that includes all yo
 style-loader - inject CSS into the DOM.
 
 Loaders arrays applies from right to left
+
+For children props is better use type React.ReactNode because JSX.Element is not good enough since a valid React children could be a string, a boolean, null...
